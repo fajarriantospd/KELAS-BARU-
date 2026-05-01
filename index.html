@@ -1,13 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<title>Webkelas</title>
-<link rel="manifest" href="manifest.json">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kelas 4B</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:linear-gradient(135deg,#00c6ff,#00bfa6);
+  color:white;
+  text-align:center;
+}
+
+.container {
+  padding:40px;
+}
+
+.card {
+  background:white;
+  color:#333;
+  padding:20px;
+  margin:20px auto;
+  max-width:400px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+button {
+  padding:10px;
+  width:100%;
+  border:none;
+  border-radius:10px;
+  background:#00bfa6;
+  color:white;
+  margin-top:10px;
+}
+
+.chat {
+  background:#e3f2fd;
+  padding:10px;
+  margin:5px;
+  border-radius:10px;
+  color:black;
+}
+</style>
+
 </head>
 <body>
 
-<h1>Webkelas SDN Pela Mampang 11 Pagi</h1>
-<p>Sudah normal 🎉</p>
+<div class="container">
+
+<h1>✨ KELAS 4B ✨</h1>
+<p>SDN Pela Mampang 11 Pagi</p>
+
+<div class="card">
+<h3>Login Sederhana</h3>
+<input id="nama" placeholder="Nama siswa">
+<button onclick="login()">Masuk</button>
+</div>
+
+<div id="app" style="display:none">
+
+<div class="card">
+<h3>💬 Chat Kelas</h3>
+<div id="chatBox"></div>
+<input id="chatInput" placeholder="Tulis pesan">
+<button onclick="kirim()">Kirim</button>
+</div>
+
+<div class="card">
+<h3>📅 Absensi</h3>
+<button onclick="absen('Hadir')">Hadir</button>
+<button onclick="absen('Izin')">Izin</button>
+<button onclick="absen('Sakit')">Sakit</button>
+</div>
+
+<div class="card">
+<h3>🏆 Ranking</h3>
+<p>🥇 Melati</p>
+<p>🥈 Mahira</p>
+<p>🥉 Mayzha</p>
+</div>
+
+</div>
+
+</div>
+
+<script>
+function login(){
+  document.getElementById('app').style.display = 'block';
+}
+
+function kirim(){
+  let msg = document.getElementById('chatInput').value;
+  let box = document.getElementById('chatBox');
+  box.innerHTML += "<div class='chat'>"+msg+"</div>";
+  chatInput.value="";
+}
+
+function absen(status){
+  alert("Absensi: " + status);
+}
+</script>
 
 </body>
 </html>
