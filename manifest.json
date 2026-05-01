@@ -1,0 +1,15 @@
+{
+  "name": "Webkelas 4B",
+  "short_name": "Webkelas",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#00c6ff",
+  "theme_color": "#00bfa6",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
